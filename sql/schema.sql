@@ -88,7 +88,7 @@ CONSTRAINT fk_equipments_node Foreign Key(Node_ID) References Network_Node(Node_
 CREATE TABLE Branch(
  Branch_ID number(20),
  Leader_Name VARCHAR2(30),
- Founded_Date date (30),
+ Founded_Date date,
 branch_Address VARCHAR2(30) not null,
 CONSTRAINT pk_Branch_ID primary key (Branch_ID)
 );
@@ -111,7 +111,7 @@ FOREIGN KEY (Branch_ID) REFERENCES Branch(Branch_ID)
 CREATE TABLE Trainings (
 Training_id varchar2(100)  PRIMARY KEY,
 duration_by_days  number(20) not null,
-Course_name  varchar2(100) not null,
+Course_name  varchar2(100) not null
 );
 
 
